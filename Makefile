@@ -1,7 +1,7 @@
 DEBUG		= -g
 #DEBUG		= -O2
-GTK_CFLAGS	:= $(shell pkg-config --cflags gtk+-2.0 goocanvas)
-GTK_LDFLAGS	:= $(shell pkg-config --libs gtk+-2.0 goocanvas)
+GTK_CFLAGS	:= $(shell pkg-config --cflags gtk+-3.0 goocanvas-2.0)
+GTK_LDFLAGS	:= $(shell pkg-config --libs gtk+-3.0 goocanvas-2.0)
 CFLAGS		+= $(DEBUG) -Wall -Wextra -Werror $(GTK_CFLAGS)
 LDFLAGS		+= $(DEBUG) $(GTK_LDFLAGS)
 SRCS		= main.c event.c display.c

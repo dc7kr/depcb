@@ -131,7 +131,7 @@ init_display()
 	pcb.scale = 1.0;
 	for (i = 0; i < pcb.layers; i++) {
 		pcb.layer[i].canvas = GOO_CANVAS(goo_canvas_new());
-		gtk_object_ref(GTK_OBJECT(pcb.layer[i].canvas));
+		g_object_ref(G_OBJECT(pcb.layer[i].canvas));
 		goo_canvas_set_bounds(pcb.layer[i].canvas,
 		    0, 0, pcb.width, pcb.height);
 		pcb.layer[i].root =
